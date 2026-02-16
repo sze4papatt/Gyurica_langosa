@@ -1,76 +1,286 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gyurica Lángosa – Szeged</title>
-<link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gyurica Lángosa – Mars téri Piac, Szeged</title>
+  <meta name="description" content="Frissen sült lángosok, töltött különlegességek, palacsinta, fánk és kávé Szegeden – Mars téri Piac Nagycsarnok." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="hero">
-  <video autoplay muted loop playsinline>
-    <source src="assets/Langos.mp4" type="video/mp4">
-  </video>
-  <div class="overlay">
-    <h1>Gyurica Lángosa</h1>
-    <p>Mars téri Piac – Nagycsarnok</p>
-    <a href="#menu">Kínálatunk</a>
+  <div class="fab-wrap" aria-label="Gyors műveletek">
+    <a class="fab fab-call" href="tel:+36705048238" title="Hívás">📞</a>
+    <a class="fab fab-map" href="https://www.google.com/maps?q=Mars+t%C3%A9ri+Piac+Nagycsarnok+Szeged" target="_blank" rel="noopener" title="Térkép">🗺️</a>
   </div>
-</header>
 
-<section class="intro">
-<h2>Frissen, ropogósan, szívvel</h2>
-<p>
-Hagyományos és töltött lángosok, palacsinta, fánk, kávé és üdítők.
-Várunk Szeged szívében, a Mars téri Piac Nagycsarnokában.
-</p>
-</section>
+  <header class="hero" id="top">
+    <video class="hero__video" autoplay muted loop playsinline>
+      <source src="assets/langos.mp4" type="video/mp4" />
+    </video>
+    <div class="hero__shade"></div>
 
-<section id="menu">
-<h2>Kínálat</h2>
-<ul class="menu">
-<li>Sima lángos</li>
-<li>Sajtos</li>
-<li>Tejfölös</li>
-<li>Sajtos-tejfölös</li>
-<li>Töltött lángosok (sonkás, kukoricás, káposztás, csilisbabos, fahéjas-almás)</li>
-<li>Palacsinta</li>
-<li>Fánk</li>
-<li>Tea, kávé, üdítők</li>
-</ul>
-</section>
+    <nav class="nav">
+      <div class="nav__brand">
+        <span class="nav__logo">🥯</span>
+        <span class="nav__title">Gyurica Lángosa</span>
+      </div>
+      <div class="nav__links">
+        <a href="#kinalat">Kínálat</a>
+        <a href="#toltott">Töltött slider</a>
+        <a href="#arak">Árak</a>
+        <a href="#galeria">Galéria</a>
+        <a href="#kapcsolat">Kapcsolat</a>
+      </div>
+      <button class="nav__burger" aria-label="Menü" aria-expanded="false">☰</button>
+    </nav>
 
-<section class="prices">
-<h2>Árak</h2>
-<p>Az árak tájékoztató jellegűek. Pontos információért érdeklődj telefonon.</p>
-<ul>
-<li>Fahéjas-almás töltött lángos – <strong>1200 Ft</strong></li>
-<li>Minden más termék – érdeklődj telefonon</li>
-</ul>
-</section>
+    <div class="hero__content">
+      <h1>Gyurica Lángosa</h1>
+      <p class="hero__sub">Mars téri Piac – Nagycsarnok • Szeged</p>
+      <div class="hero__cta">
+        <a class="btn" href="#toltott">Nézd a töltötteket</a>
+        <a class="btn btn--ghost" href="tel:+36705048238">Hívás</a>
+      
+        <a class="btn btn--ghost" href="https://www.facebook.com/profile.php?id=100057485294323&sk=reels_tab&locale=hu_HU" target="_blank" rel="noopener">Facebook Reels</a>
+      </div>
 
-<section class="gallery">
-<h2>Képek</h2>
-<div class="grid">
-<img src="assets/Síma lángos.jpg">
-<img src="assets/Sajtos tejfölös.jpg">
-<img src="assets/sonkas kukoricás sajtos töltött.jpg">
-<img src="assets/palacsinta.jpg">
-<img src="assets/Fánk.jpg">
-</div>
-</section>
+      <div class="hero__badges">
+        <span class="badge">Frissen sül</span>
+        <span class="badge">Hagyományos ízek</span>
+        <span class="badge">Töltött különlegességek</span>
+      </div>
+    </div>
+  </header>
 
-<section class="contact">
-<h2>Elérhetőség</h2>
-<p>📍 Szeged – Mars téri Piac, Nagycsarnok</p>
-<p>📞 +36 70 504 8238</p>
-</section>
+  <main>
+    <section class="section section--tight intro">
+      <div class="container">
+        <h2>Frissen, ropogósan, szívvel</h2>
+        <p class="lead">
+          Hagyományos lángosok és töltött finomságok, mellé palacsinta, fánk, kávé és üdítők.
+          Gyere be a Nagycsarnokba – egy jó lángosnak mindig van ideje.
+        </p>
 
-<footer>
-<p>© Gyurica Lángosa</p>
-</footer>
+        <div class="cards cards--3">
+          <article class="card">
+            <h3>Gyors kiszolgálás</h3>
+            <p>Piacos tempó, friss alapanyagok – amit kérsz, úgy készítjük.</p>
+          </article>
+          <article class="card">
+            <h3>Édes & sós</h3>
+            <p>Nem csak lángos: palacsinta, fánk és forró italok is várnak.</p>
+          </article>
+          <article class="card">
+            <h3>Mai infó</h3>
+            <p><strong id="hours">Nyitvatartás betöltése…</strong></p>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <section class="section" id="kinalat">
+      <div class="container">
+        <div class="section__head">
+          <h2>Kínálat</h2>
+          <p class="muted">A klasszikusoktól a töltött különlegességekig.</p>
+        </div>
+
+        <div class="menu-grid">
+          <div class="menu-item"><span class="emoji">🥯</span><h3>Sima</h3><p>Ropogós, friss – ahogy szeretjük.</p></div>
+          <div class="menu-item"><span class="emoji">🧀</span><h3>Sajtos</h3><p>Bőséges sajt a tetején.</p></div>
+          <div class="menu-item"><span class="emoji">🥛</span><h3>Tejfölös</h3><p>Krémes, hűs tejföllel.</p></div>
+          <div class="menu-item"><span class="emoji">🧀🥛</span><h3>Sajtos-tejfölös</h3><p>A legnépszerűbb kombó.</p></div>
+          <div class="menu-item"><span class="emoji">🌯</span><h3>Töltött</h3><p>Sonkás-kukoricás, káposztás, csilisbabos, fahéjas-almás…</p></div>
+          <div class="menu-item"><span class="emoji">🥞</span><h3>Palacsinta</h3><p>Édes kedvenc – többféle töltéssel.</p></div>
+          <div class="menu-item"><span class="emoji">🍩</span><h3>Fánk</h3><p>Puha, porcukros, ellenállhatatlan.</p></div>
+          <div class="menu-item"><span class="emoji">☕</span><h3>Italok</h3><p>Kávé, tea, üdítők – ami jól esik mellé.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="toltott">
+      <div class="container">
+        <div class="section__head">
+          <h2>Töltött különlegességek – slider</h2>
+          <p class="muted">Lapozz jobbra-balra – mobilon húzással is működik.</p>
+        </div>
+
+        <div class="slider" aria-label="Töltött lángos slider">
+          <button class="slider__btn slider__btn--prev" aria-label="Előző">‹</button>
+          <div class="slider__viewport">
+            <div class="slider__track">
+              <figure class="slide">
+                <img src="assets/toltott_sonkaskukorica.jpg" alt="Sonkás-kukoricás sajtos töltött lángos">
+                <figcaption>Sonkás–kukoricás sajtos töltött</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/toltott_csili.jpg" alt="Csilisbabos sajtos töltött lángos">
+                <figcaption>Csilisbabos sajtos töltött</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/toltott_kaposzta.jpg" alt="Káposztás töltött lángos">
+                <figcaption>Káposztás töltött</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/toltott_fahejas_almas.jpg" alt="Fahéjas-almás töltött lángos">
+                <figcaption>Fahéjas–almás töltött <span class="chip">1200 Ft</span></figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/toltott_limited.jpg" alt="Limitált töltött lángos">
+                <figcaption>Limitált töltött – kérdezd a pultnál!</figcaption>
+              </figure>
+            </div>
+          </div>
+          <button class="slider__btn slider__btn--next" aria-label="Következő">›</button>
+
+          <div class="slider__dots" aria-label="Lapozó pontok">
+            <button class="dot is-active" aria-label="1. kép"></button>
+            <button class="dot" aria-label="2. kép"></button>
+            <button class="dot" aria-label="3. kép"></button>
+            <button class="dot" aria-label="4. kép"></button>
+            <button class="dot" aria-label="5. kép"></button>
+          </div>
+        </div>
+
+        <div class="featured card card--featured">
+          <div>
+            <h3>Mai kedvenc</h3>
+            <p class="muted" id="featuredDesc">Betöltés…</p>
+          </div>
+          <a class="btn" href="tel:+36705048238">Érdeklődöm telefonon</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="arak">
+      <div class="container">
+        <div class="section__head">
+          <h2>Árak</h2>
+          <p class="muted">Kitölthető árlista – most több tételnél: „érdeklődj telefonon”.</p>
+        </div>
+
+        <div class="price-grid">
+          <div class="price-card">
+            <h3>Lángosok</h3>
+            <ul>
+              <li><span>Sima</span><span class="price">—</span></li>
+              <li><span>Sajtos</span><span class="price">—</span></li>
+              <li><span>Tejfölös</span><span class="price">—</span></li>
+              <li><span>Sajtos-tejfölös</span><span class="price">—</span></li>
+              <li><span>Töltött (többféle)</span><span class="price">Érdeklődj</span></li>
+              <li><span>Fahéjas-almás töltött</span><span class="price"><strong>1200 Ft</strong></span></li>
+            </ul>
+          </div>
+
+          <div class="price-card">
+            <h3>Édességek</h3>
+            <ul>
+              <li><span>Palacsinta</span><span class="price">—</span></li>
+              <li><span>Fánk</span><span class="price">—</span></li>
+            </ul>
+          </div>
+
+          <div class="price-card">
+            <h3>Italok</h3>
+            <ul>
+              <li><span>Kávé</span><span class="price">—</span></li>
+              <li><span>Tea</span><span class="price">—</span></li>
+              <li><span>Üdítők</span><span class="price">—</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="note" id="priceNote">Az árak betöltése…</p>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="galeria">
+      <div class="container">
+        <div class="section__head">
+          <h2>Galéria</h2>
+          <p class="muted">Néhány kedvenc kép – ízelítőnek.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gitem"><img src="assets/langos_sima.jpg" alt="Sima lángos"><figcaption>Sima</figcaption></figure>
+          <figure class="gitem"><img src="assets/langos_sajtos_tejsz.jpg" alt="Sajtos-tejfölös lángos"><figcaption>Sajtos-tejfölös</figcaption></figure>
+          <figure class="gitem"><img src="assets/palacsinta.jpg" alt="Palacsinta"><figcaption>Palacsinta</figcaption></figure>
+          <figure class="gitem"><img src="assets/fank.jpg" alt="Fánk"><figcaption>Fánk</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="social">
+      <div class="container">
+        <div class="section__head">
+          <h2>Kövess minket</h2>
+          <p class="muted">Ide később be tudjuk kötni a Facebook / Instagram linkeket, vagy akár beágyazott posztokat is.</p>
+        </div>
+
+        <div class="social-cards">
+          <a class="social-card" href="https://www.facebook.com/profile.php?id=100057485294323&sk=reels_tab&locale=hu_HU" target="_blank" rel="noopener" aria-label="Facebook – Gyurica Lángosa">
+            <div class="social-ico">f</div>
+            <div>
+              <h3>Facebook</h3>
+              <p class="muted">Kattints és nézd a Reels videókat.</p>
+            </div>
+          </a>
+          <a class="social-card" href="#" aria-label="Instagram link (később)">
+            <div class="social-ico">◎</div>
+            <div>
+              <h3>Instagram</h3>
+              <p class="muted">Kattints és nézd a Reels videókat.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="kapcsolat">
+      <div class="container">
+        <div class="section__head">
+          <h2>Kapcsolat</h2>
+          <p class="muted">Találkozunk a Nagycsarnokban.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Elérhetőség</h3>
+            <p><strong>Helyszín:</strong> Mars téri Piac – Nagycsarnok, Szeged</p>
+            <p><strong>Telefon:</strong> <a href="tel:+36705048238">+36 70 504 8238</a></p>
+            <p class="muted">Kattints a hívás gombra mobilon és azonnal tárcsáz.</p>
+
+            <div class="contact-actions">
+              <a class="btn" href="tel:+36705048238">Hívás</a>
+              <a class="btn btn--ghost" href="https://www.google.com/maps?q=Mars+t%C3%A9ri+Piac+Nagycsarnok+Szeged" target="_blank" rel="noopener">Útvonal</a>
+            </div>
+          </div>
+
+          <div class="contact-card contact-card--map">
+            <iframe
+              title="Google Térkép – Mars téri Piac, Szeged"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Mars%20t%C3%A9ri%20Piac%20Nagycsarnok%20Szeged&output=embed">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Gyurica Lángosa</p>
+      <a class="backtop" href="#top">Vissza a tetejére ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
