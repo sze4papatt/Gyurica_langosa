@@ -2,6 +2,41 @@
 (() => {
   document.getElementById('year').textContent = new Date().getFullYear();
 
+  // Kínálat csempék: data-bg -> CSS háttérkép
+  document.querySelectorAll('.menu-item--bg').forEach(el => {
+    const url = el.getAttribute('data-bg');
+    if (url) el.style.setProperty('--menu-bg', `url("${url}")`);
+  });
+  // Kínálat csempék – finom parallax scroll (ha nincs reduced motion)
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const menuTiles = Array.from(document.querySelectorAll('.menu-item--bg'));
+  if (!prefersReduced && menuTiles.length) {
+    let ticking = false;
+    const updateMenuParallax = () => {
+      ticking = false;
+      const vh = window.innerHeight || 800;
+      for (const el of menuTiles) {
+        const r = el.getBoundingClientRect();
+        if (r.bottom < -200 || r.top > vh + 200) continue;
+        const center = r.top + r.height / 2;
+        const t = (center - vh / 2) / (vh / 2); // -1..1
+        const offset = Math.max(-18, Math.min(18, -t * 18)); // px
+        el.style.setProperty('--bgY', `${offset}px`);
+      }
+    };
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(updateMenuParallax);
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    updateMenuParallax();
+  }
+
+
+
   const nav = document.querySelector('.nav');
   const burger = document.querySelector('.nav__burger');
   if (burger && nav) {
